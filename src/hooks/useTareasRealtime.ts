@@ -14,7 +14,7 @@ export const useTareasRealtime = () => {
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: 'tareas' },
-        () => {
+        ()=> {
           queryClient.invalidateQueries({ queryKey: ['tareas'] });
         }
       )
