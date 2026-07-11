@@ -1,0 +1,58 @@
+.app {
+  max-width: 480px;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+  padding: 0 16px;
+}
+
+.form-crear {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form-crear input {
+  flex: 1;
+  padding: 8px;
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-tareas li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.lista-tareas li.completada span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.lista-tareas li span {
+  flex: 1;
+}
+
+.lista-tareas input[type='file'] {
+  max-width: 140px;
+  font-size: 12px;
+}
+
+.estado {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+}
+
+.estado.error {
+  color: #c0392b;
+}
