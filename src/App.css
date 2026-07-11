@@ -5,6 +5,12 @@
   padding: 0 16px;
 }
 
+.estadisticas {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
 .form-crear {
   display: flex;
   gap: 8px;

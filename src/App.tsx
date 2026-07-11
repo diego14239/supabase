@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { useTareas } from './hooks/useTareas';
 import { useSubirAdjunto } from './hooks/useSubirAdjunto';
+import { useEstadisticasTareas } from './hooks/useEstadisticasTareas';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     isCreating,
   } = useTareas();
   const { subir, uploading } = useSubirAdjunto();
+  const { estadisticas } = useEstadisticasTareas();
 
   const [titulo, setTitulo] = useState('');
 
@@ -42,6 +44,12 @@ function App() {
   return (
     <div className="app">
       <h1>Tareas (práctica CRUD + Supabase)</h1>
+
+      {estadisticas && (
+        <p className="estadisticas">
+          Total: {estadisticas.total} · Completadas: {estadisticas.completadas} · Pendientes: {estadisticas.pendientes}
+        </p>
+      )}
 
       <form onSubmit={handleCrear} className="form-crear">
         <input
